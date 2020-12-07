@@ -103,35 +103,35 @@ const myObjectArray = [
 	},
 ];
 
-function getMaxOfArray(arr) {
-	const maxOfArray = Math.max(...arr); //Se usan los "..." para hacer una copia del mismo y no una referencia.
-	console.log('El numero maximo del array es:', maxOfArray);
+function getMinOfArray(arr) {
+	const minOfArray = Math.min(...arr); //Se usan los "..." para hacer una copia del mismo y no una referencia.
+	console.log('El numero minimo del array es:', minOfArray);
 }
-getMaxOfArray(myArray);
-//Por consola: "101"
+getMinOfArray(myArray);
+//Por consola: 0
 
 //Como encontrar el mayor numero pero de un array de objetos:
-function getMaxOfArrayOfObjects(arr) {
-	const maxOfArrayOfObjects = arr.map((el) => el.pts); //Creo un nuevo array, pero solo de los elementos que estoy necesitando
+function getMinOfArrayOfObjects(arr) {
+	const minOfArrayOfObjects = arr.map((el) => el.pts); //Creo un nuevo array, pero solo de los elementos que estoy necesitando
 	console.log(
 		'Creo un array solo de la propiedad que estoy necesitando:',
-		maxOfArrayOfObjects
+		minOfArrayOfObjects
 	);
-	const maxOfArrayOfObjectsNumber = Math.max(...maxOfArrayOfObjects);
-	console.log('El maximo del array es:', maxOfArrayOfObjectsNumber);
+	const minOfArrayOfObjectsNumber = Math.min(...minOfArrayOfObjects);
+	console.log('El minimo del array es:', minOfArrayOfObjectsNumber);
 }
-getMaxOfArrayOfObjects(myObjectArray);
-//Por consola: "307"
+getMinOfArrayOfObjects(myObjectArray);
+//Por consola: 0
 
 //Como encontrar el mayor numero pero de un array de objetos (version 2):
-function getMaxOfArrayOfObjects2(arr) {
-	const maxObjectArray = Math.max(
+function getMinOfArrayOfObjects2(arr) {
+	const minObjectArray = Math.min(
 		//Como en la funcion anterior, pero se busca en el mismo momento que se hace un nuevo array, queda mas prolijo
 		...arr.map((el) => {
 			return el.pts;
 		})
 	);
-	console.log('Otra forma de hacerlo, en una sola linea es:', maxObjectArray);
+	console.log('Otra forma de hacerlo, en una sola linea es:', minObjectArray);
 }
-getMaxOfArrayOfObjects2(myObjectArray);
-//Por consola: "307"
+getMinOfArrayOfObjects2(myObjectArray);
+//Por consola: 0
