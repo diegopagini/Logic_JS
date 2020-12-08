@@ -148,6 +148,7 @@ function histogramOfArrayWithObjects(arr) {
 		}
 	}
 	console.log(index);
+	console.log(Math.max(...index));
 }
 histogramOfArrayWithObjects(myObjectArray);
 
