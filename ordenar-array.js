@@ -146,3 +146,26 @@ function orderObjects(arr) {
 	console.log(orderArray);
 }
 orderObjects(myObjectArray);
+
+function orderByLetters(arr) {
+	const orderArray = arr.sort(function (a, b) {
+		if (a.name > b.name) {
+			//De esta forma, ordena el array de A a Z.
+			return 1;
+		} else if (a.name < b.name) {
+			return -1;
+		}
+		return 0;
+	});
+
+	// 	if (a.name < b.name) {
+	// 		//De esta forma, ordena el array de Z a A.
+	// 		return 1;
+	// 	} else if (a.name > b.name) {
+	// 		return -1;
+	// 	}
+	// 	return 0;
+	// });
+	console.log(orderArray);
+}
+orderByLetters(myObjectArray);
