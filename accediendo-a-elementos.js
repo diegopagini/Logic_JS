@@ -124,11 +124,18 @@ joinArrays(arrayA, '-');
 function sliceArray(arr, start, end) {
 	const arraySliced = arr.slice(start, end);
 	//Crea un nuevo arreglo, partiendo desde "start" (incluido) hasta "end" (no incluido)
-	console.log('arraySliced', arraySliced);
+	console.log('arraySliced', arraySliced, 'Array original:', arr);
 }
 sliceArray(arrayC, 0, 5);
-//Por consola: arraySliced (5) [1, 2, 3, 4, 5]
+//Por consola: arraySliced (5) [1, 2, 3, 4, 5] Array original: (15) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
+//SPLICE
+function spliceArray(arr, start, end) {
+	const arraySpliced = arr.splice(start, end);
+	console.log('arraySpliced', arraySpliced, 'Array original:', arr);
+}
+spliceArray(arrayC, 0, 5);
+//Por consola: arraySpliced (5) [1, 2, 3, 4, 5] Array original: (10) [6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 //INDEXOF
 function indexOfArray(arr, obj) {
 	const indexOfObj = arr.indexOf(obj);
