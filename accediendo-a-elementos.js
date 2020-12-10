@@ -136,6 +136,7 @@ function spliceArray(arr, start, end) {
 }
 spliceArray(arrayC, 0, 5);
 //Por consola: arraySpliced (5) [1, 2, 3, 4, 5] Array original: (10) [6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
 //INDEXOF
 function indexOfArray(arr, obj) {
 	const indexOfObj = arr.indexOf(obj);
